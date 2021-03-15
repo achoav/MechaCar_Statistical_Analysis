@@ -11,7 +11,7 @@ Generate a multi-factor linear regression using the "lm" function, to predict a 
 •	Since there was no feature selection in this model, we will see that some variables are less relevant to include in the model. 
 •	For the overall model, we see that we have a R-squared of .7149 which mean that this model with our given dataset, our five independent variables can explain about **71%** of what determines (mpg). Which in general, is a satisfactory model to use. This model can be improved by simply including more effective variables to explain our dependent variable (mpg) through data collection. 
 •	Our model rejects the "null hypothesis" that the slope is zero, since the relationship between our Y (MPG) and our independent variables is not zero for some of the variables analyzed below. Our alternative hypothesis says that our intercept does not equal zero which is true.  
-! [] (images/ LM_equation.PNG)
+![](images/ LM_equation.PNG)
 ### Independent Variable Analysis (P-value):
 1.	vehicle_lenght
 . P-value of about 0 shows that is statistically significant to this model.
@@ -33,19 +33,20 @@ mpg = 6.27 * vehicle_length - 3.41 * AWD + 3.55 * ground_clearance - 104
 As, R-square is 0.71 so 71% of the variations in mpg can be explained by changes in the vehicle length, the vehicle weight, the spoiler angle, the drivetrain, and the ground clearance. 
 We can consider this linear model as efficient to predict mpg of MechaCar prototypes.  The p-value of the linear model was 5.35e-11 which is smaller than the assumed significance level of .05%, so we reject that null hypothesis, and accept the alternative hypothesis that the model has a slope. Consider running another model using only the two variables that are non-random to "MPG": vehicle_length and vehicle_weight.
 ### Summary Statistics Table:
-![] (images/ LM_stats.PNG)
+![](images/ LM_stats.PNG)
 
 ## Deliverable 2 - t-test on Suspension Coils
 ## Suspension Coil t-test 
 In this case, the one-sample t-test has been used to assert if there is a statistical difference between the means of a sample dataset (suspension coil's pound-per-inch) and hypothesized, potential population dataset. The mean of the hypothesized, potential population dataset is given as 1,500 pounds per inch.
 Assuming the significance level of 0.05 percent, the p-value (0.06028) is above our significance level. The data is considered to have normal distribution. Therefore, we do not have sufficient evidence to reject the null hypothesis, and we would state that the two means are statistically similar.
 
-![] (images/ lots.PNG)
+![](images/ lots.PNG)
 
 ## Design test of variance must *NOT* exceed 100 pounds per inch
 As per summary table below, the metrics are: Mean = 1498.78, Median = 1500 and Variance = 62.293656, with STD = 7.8926
 The mean and the median are nearly the same.  Hence, we can assume the dataset has a normal distribution and a zero skewness. This can visually be seen by the plot below:
-![] (images/ plot1.PNG)
+![](images/ plot1.PNG)
+
 The design specifications for the MechaCar suspension coils dictates that the variance of the suspension coil must NOT exceed 100 pounds per inch.  Based on the t-test, the variance is about 62.29 pounds per inch which is below the specified value.  Hence, the current manufacturing data meets the design specification.
 Now, population means can never be known but just for this case there is one in place to gather some insight on pounds per square inch per Lot. Let see if the lot are statistically significant/ different from the predetermined population mean of 1500.
 
@@ -55,11 +56,11 @@ The t-test has a p-value of 0.9048, that is not statistically significant: so, w
 
 ### Lot 2 vs. Population Mean:
 The t-test has a p-value of 0.3451, that is not statistically significant: so, we do not have enough evidence to reject the "null hypothesis".  Lot#2 and Population mean are statistically similar.
-![] (images/ lot2.PNG)
+![](images/ lot2.PNG)
 
 ### Lot 3 vs. Population Mean:
 The t-test has a p-value of 0.637, that is not statistically significant: so, we do not have enough evidence to reject the "null hypothesis".  Lot#3 and Population mean are statistically similar.
-![] (images/ lot3.PNG)
+![](images/ lot3.PNG)
 
 ## Study Design
 •	Increase the test by adding different categorical car data (SUV, sports car, Pickups).
