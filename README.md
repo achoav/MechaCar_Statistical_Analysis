@@ -49,7 +49,7 @@ As per summary table below, the metrics are: Mean = 1498.78, Median = 1500 and V
 ![](Images/pop_ttest.PNG)
 The mean and the median are nearly the same.  Hence, we can assume the dataset has a normal distribution and a zero skewness. This can visually be seen by the plot above:  
   
- ![](Images/pop_ttest.PNG)
+![](Images/pop_ttest.PNG)
 
 The design specifications for the MechaCar suspension coils dictates that the variance of the suspension coil must NOT exceed 100 pounds per inch.  Based on the t-test, the variance is about 62.29 pounds per inch which is below the specified value.  Hence, the current manufacturing data meets the design specification.
 Now, population means can never be known but just for this case there is one in place to gather some insight on pounds per square inch per Lot. Let see if the lot are statistically significant/ different from the predetermined population mean of 1500.
