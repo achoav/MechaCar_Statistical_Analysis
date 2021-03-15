@@ -1,39 +1,53 @@
-# Please install.packages("tidyverse") before running it
-# Or just install install.packages("dplyr")
-
+---
+title: "MechanaCarChallenge"
+author: "Valeria Achoa"
+output: html_notebook
+---
+```{r}
 library("dplyr") #import dplyr package
-
 mechaCarData <- read_csv("Resources/MechaCar_mpg.csv") #import MechaCar data
 head(mechaCarData) #display first rows of imported data
-
-**Part1**
-
-# Deliverable 1  - Perform linear regression using the lm() function
-# on 6 variables: vehicle_length + vehicle_weight + spoiler_angle + AWD + ground_clearance
+```
+## Deliverable 1  - 
+#### Perform linear regression using the lm() function on 6 variables: vehicle_length + vehicle_weight + spoiler_angle + AWD + ground_clearance
+```{r}
 lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + AWD + ground_clearance,data=mechaCarData) 
-#generate summary statistics
+```
+### Generate Summary Statistics
+```{r}
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + AWD + ground_clearance,data=mechaCarData)) 
 
-# Deliverable 2: Create Visualizations for the Trip Analysis
+```
+## Deliverable 2: Create Visualizations for the Trip Analysis
+```{r}
 suspension_coil_data <- read_csv("Resources/Suspension_Coil.csv") #import suspension coil data
 head(suspension_coil_data)
-
-# Table of Total Summary : Mean, Median, Variance, SD
+```
+#### Table of Total Summary : Mean, Median, Variance, SD
+```{r}
 total_summary <- suspension_coil_data %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep') #create total summary table
 total_summary
-
-# Table of Summary of the lots: Mean, Median, Variance, SD
+```
+### Table of Summary of the lots: Mean, Median, Variance, SD
+```{r}
 lot_summary <- suspension_coil_data %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep') #create lot summary table
 lot_summary
 
-# Sample of 50 lots
-global_sample_table <- suspension_coil_data %>% sample_n(50) #randomly sample 50 data points
+```
+### Plot all data (PSI) vs. density
 
-# Plot all data (PSI) vs. density
+```{r}
 plt <- ggplot(suspension_coil_data,aes(x=PSI)) #import all coil data into ggplot2
 plt + geom_density() #visualize distribution with density plot
+```
 
+### Sample of 50 lots and plot with a log10 scale PSI vs. density
+
+```{r}
+global_sample_table <- suspension_coil_data %>% sample_n(50) 
+#randomly sample 50 data points
 # plot sample data with a log scale log10(PSI) vs. density
 plt <- ggplot(global_sample_table,aes(x=log10(PSI))) #import sample coil data into ggplot2
 plt + geom_density() #visualize distribution with density plot
+```
 
