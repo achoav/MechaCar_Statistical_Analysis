@@ -1,37 +1,38 @@
 # MechaCar_Statistical_Analysis
 ## Project Overview
-•	This project involves the use of statistics and hypothesis testing to analyze a series of datasets from the automotive industry.
-•	All the statistical analysis and visualizations is written in the R programming language.
-•	Fuel efficiency (MPG): Fuel efficiency is a measure of how far a vehicle can travel per unit of fuel. Fuel efficient vehicles require less gas to go a given distance. Because less fuel is required to cover a journey, fuel-efficient cars save more money for drivers in the long-term. In the USA, fuel efficiency is expressed as "miles per gallon" (mpg). The question is whether the mpg of MechaCars is better than other competitors or not?
+  •	This project involves the use of statistics and hypothesis testing to analyze a series of datasets from the automotive industry.
+  •	All the statistical analysis and visualizations is written in the R programming language.
+  •	Fuel efficiency (MPG): Fuel efficiency is a measure of how far a vehicle can travel per unit of fuel. Fuel efficient vehicles require less gas to go a given distance.  Because less fuel is required to cover a journey, fuel-efficient cars save more money for drivers in the long-term. In the USA, fuel efficiency is expressed as "miles per gallon" (mpg). The question is whether the mpg of MechaCars is better than other competitors or not?
 ## Tools and Techniques
-•	R-programming, R-Studio (R-notebook), tidyverse, ggplot2, Statistical Tests, Hypothesis Tests
+  •	R-programming, R-Studio (R-notebook), tidyverse, ggplot2, Statistical Tests, Hypothesis Tests
+
 ## Deliverable 1 - Linear Regression to Predict MPG
 Generate a multi-factor linear regression using the "lm" function, to predict a dependent variable: "MPG" based on 5 independent variables: 
 (vehicle_length + vehicle_weight + spoiler_angle + AWD + ground_clearance)
-•	Since there was no feature selection in this model, we will see that some variables are less relevant to include in the model. 
-•	For the overall model, we see that we have a R-squared of .7149 which mean that this model with our given dataset, our five independent variables can explain about **71%** of what determines (mpg). Which in general, is a satisfactory model to use. This model can be improved by simply including more effective variables to explain our dependent variable (mpg) through data collection. 
-•	Our model rejects the "null hypothesis" that the slope is zero, since the relationship between our Y (MPG) and our independent variables is not zero for some of the variables analyzed below. Our alternative hypothesis says that our intercept does not equal zero which is true.  
+  •	Since there was no feature selection in this model, we will see that some variables are less relevant to include in the model. 
+  •	For the overall model, we see that we have a R-squared of .7149 which mean that this model with our given dataset, our five independent variables can explain about **71%** of what determines (mpg). Which in general, is a satisfactory model to use. This model can be improved by simply including more effective variables to explain our dependent variable (mpg) through data collection. 
+  •	Our model rejects the "null hypothesis" that the slope is zero, since the relationship between our Y (MPG) and our independent variables is not zero for some of the variables analyzed below. Our alternative hypothesis says that our intercept does not equal zero which is true.  
 
 ![](Images/LM_equation.PNG)
 
 ### Independent Variable Analysis (P-value):
 1.	vehicle_lenght
-. P-value of about 0 shows that is statistically significant to this model.
+  . P-value of about 0 shows that is statistically significant to this model.
 2.	vehicle_weight
-. P-value of about 0.0776 shows that is statistically significant to this model if we assume a higher level of alpha (.1 instead of .05).  Usually alpha is set at 0.05 (5%)
+  . P-value of about 0.0776 shows that is statistically significant to this model if we assume a higher level of alpha (.1 instead of .05).  Usually alpha is set at 0.05 (5%)
 3.	spoiler_angle
-. P-value of .3069 shows that is NOT statistically significant.  Therefore, we will not include in this model.
+  . P-value of .3069 shows that is NOT statistically significant.  Therefore, we will not include in this model.
 4.	ground_clearance
-. P-value of about 0 shows that is statistically significant to this model.
+  . P-value of about 0 shows that is statistically significant to this model.
 5.	AWD
-. P-value of .3069 shows that is NOT statistically significant.  Therefore, we will not include in this model.	
+  . P-value of .3069 shows that is NOT statistically significant.  Therefore, we will not include in this model.	
 
 
 Hence, the variables/coefficients that provided a **non-random** amount are "vehicle_length", "ground_clearance" and "vehicle_weight" (if we assume alpha at .1) to "mpg".  The intercept has a value of -104.
 ### The equation:
-mpg = (6.27) * vehicle_length + (1.25e-3) * vehicle_weigth + (6.88e-2) * spoiler_angle (-3.41) * AWD + 3.55 * ground_clearance - (1.04e+2)
+mpg = [(6.27) * vehicle_length] + [(1.25e-3) * vehicle_weigth] + [(6.88e-2) * spoiler_angle] + [(-3.41) * AWD] + [3.55 * ground_clearance] - (1.04e+2)
 ### Approximate to:
-mpg = 6.27 * vehicle_length - 3.41 * AWD + 3.55 * ground_clearance - 104
+mpg = [(6.27) * vehicle_length] + [(-3.41) * AWD] + [(3.55)] * ground_clearance] + (-104)
 As, R-square is 0.71 so 71% of the variations in mpg can be explained by changes in the vehicle length, the vehicle weight, the spoiler angle, the drivetrain, and the ground clearance. 
 We can consider this linear model as efficient to predict mpg of MechaCar prototypes.  The p-value of the linear model was 5.35e-11 which is smaller than the assumed significance level of .05%, so we reject that null hypothesis, and accept the alternative hypothesis that the model has a slope. Consider running another model using only the two variables that are non-random to "MPG": vehicle_length and vehicle_weight.
 ### Summary Statistics Table:
@@ -51,6 +52,7 @@ The mean and the median are nearly the same.  Hence, we can assume the dataset h
 
 The design specifications for the MechaCar suspension coils dictates that the variance of the suspension coil must NOT exceed 100 pounds per inch.  Based on the t-test, the variance is about 62.29 pounds per inch which is below the specified value.  Hence, the current manufacturing data meets the design specification.
 Now, population means can never be known but just for this case there is one in place to gather some insight on pounds per square inch per Lot. Let see if the lot are statistically significant/ different from the predetermined population mean of 1500.
+![](Images/pop_ttest.PNG)
 
 ### Lot 1 vs. Population Mean:
 The t-test has a p-value of 0.9048, that is not statistically significant: so, we do not have enough evidence to reject the "null hypothesis".  Lot#1 and Population mean are statistically similar.
