@@ -41,14 +41,12 @@ We can consider this linear model as efficient to predict mpg of MechaCar protot
 ## Deliverable 2 - t-test on Suspension Coils
 ## Suspension Coil t-test 
 In this case, the one-sample t-test has been used to assert if there is a statistical difference between the means of a sample dataset (suspension coil's pound-per-inch) and hypothesized, potential population dataset. The mean of the hypothesized, potential population dataset is given as 1,500 pounds per inch.
-Assuming the significance level of 0.05 percent, the p-value (0.06028) is above our significance level. The data is considered to have normal distribution. Therefore, we do not have sufficient evidence to reject the null hypothesis, and we would state that the two means are statistically similar.
-
+Assuming the significance level of 0.05 percent, the p-value (0.06028) is above our significance level. The data is considered to have normal distribution. Therefore, we do not have sufficient evidence to reject the null hypothesis, and we would state that the two means are statistically similar.  
 ![](Images/lots.PNG)  
-![](Images/pop_ttest.PNG)
-
 
 ## Design test of variance must *NOT* exceed 100 pounds per inch
-As per summary table below, the metrics are: Mean = 1498.78, Median = 1500 and Variance = 62.293656, with STD = 7.8926
+As per summary table below, the metrics are: Mean = 1498.78, Median = 1500 and Variance = 62.293656, with STD = 7.8926.  
+![](Images/pop_ttest.PNG)
 The mean and the median are nearly the same.  Hence, we can assume the dataset has a normal distribution and a zero skewness. This can visually be seen by the plot above:  
   
  ![](Images/pop_ttest.PNG)
