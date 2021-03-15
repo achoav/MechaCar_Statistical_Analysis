@@ -45,10 +45,10 @@ Assuming the significance level of 0.05 percent, the p-value (0.06028) is above 
 ![](Images/lots.PNG)  
 
 ## Design test of variance must *NOT* exceed 100 pounds per inch
-As per summary table below, the metrics are: Mean = 1498.78, Median = 1500 and Variance = 62.293656, with STD = 7.8926.  
+As per summary table below, the metrics are: Mean = 1498.78, Median = 1500 and Variance = 62.293656, with STD = 7.8926.
 ![](Images/pop_ttest.PNG)
   
-The mean and the median are nearly the same.  Hence, we can assume the dataset has a normal distribution and a zero skewness. This can visually be seen by the plot above:  
+The mean and the median are nearly the same.  Hence, we can assume the dataset has a normal distribution and a zero skewness. This can visually be seen by the plot above:
 ![](Images/plot.PNG)
   
 The design specifications for the MechaCar suspension coils dictates that the variance of the suspension coil must NOT exceed 100 pounds per inch.  Based on the t-test, the variance is about 62.29 pounds per inch which is below the specified value.  Hence, the current manufacturing data meets the design specification.
