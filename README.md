@@ -33,31 +33,34 @@ mpg = 6.27 * vehicle_length - 3.41 * AWD + 3.55 * ground_clearance - 104
 As, R-square is 0.71 so 71% of the variations in mpg can be explained by changes in the vehicle length, the vehicle weight, the spoiler angle, the drivetrain, and the ground clearance. 
 We can consider this linear model as efficient to predict mpg of MechaCar prototypes.  The p-value of the linear model was 5.35e-11 which is smaller than the assumed significance level of .05%, so we reject that null hypothesis, and accept the alternative hypothesis that the model has a slope. Consider running another model using only the two variables that are non-random to "MPG": vehicle_length and vehicle_weight.
 ### Summary Statistics Table:
-! [] (images/ LM_stats.PNG)
+![] (images/ LM_stats.PNG)
 
 ## Deliverable 2 - t-test on Suspension Coils
 ## Suspension Coil t-test 
 In this case, the one-sample t-test has been used to assert if there is a statistical difference between the means of a sample dataset (suspension coil's pound-per-inch) and hypothesized, potential population dataset. The mean of the hypothesized, potential population dataset is given as 1,500 pounds per inch.
 Assuming the significance level of 0.05 percent, the p-value (0.06028) is above our significance level. The data is considered to have normal distribution. Therefore, we do not have sufficient evidence to reject the null hypothesis, and we would state that the two means are statistically similar.
 
-! [] (images/ lots.PNG)
+![] (images/ lots.PNG)
 
 ## Design test of variance must *NOT* exceed 100 pounds per inch
 As per summary table below, the metrics are: Mean = 1498.78, Median = 1500 and Variance = 62.293656, with STD = 7.8926
 The mean and the median are nearly the same.  Hence, we can assume the dataset has a normal distribution and a zero skewness. This can visually be seen by the plot below:
-! [] (images/ plot1.PNG)
+![] (images/ plot1.PNG)
 The design specifications for the MechaCar suspension coils dictates that the variance of the suspension coil must NOT exceed 100 pounds per inch.  Based on the t-test, the variance is about 62.29 pounds per inch which is below the specified value.  Hence, the current manufacturing data meets the design specification.
 Now, population means can never be known but just for this case there is one in place to gather some insight on pounds per square inch per Lot. Let see if the lot are statistically significant/ different from the predetermined population mean of 1500.
 
 ### Lot 1 vs. Population Mean:
 The t-test has a p-value of 0.9048, that is not statistically significant: so, we do not have enough evidence to reject the "null hypothesis".  Lot#1 and Population mean are statistically similar.
-! [] (images/ lot1.PNG)
+![] (images/ lot1.PNG)
+
 ### Lot 2 vs. Population Mean:
 The t-test has a p-value of 0.3451, that is not statistically significant: so, we do not have enough evidence to reject the "null hypothesis".  Lot#2 and Population mean are statistically similar.
-! [] (images/ lot2.PNG)
+![] (images/ lot2.PNG)
+
 ### Lot 3 vs. Population Mean:
 The t-test has a p-value of 0.637, that is not statistically significant: so, we do not have enough evidence to reject the "null hypothesis".  Lot#3 and Population mean are statistically similar.
-! [] (images/ lot3.PNG)
+![] (images/ lot3.PNG)
+
 ## Study Design
 •	Increase the test by adding different categorical car data (SUV, sports car, Pickups).
 •	Compare MechaCar dataset against the competitor’s dataset to establish that there is a statistical difference between MechaCar and Non-MechaCars products. We want to reject our null hypothesis that there is not a difference between the two groups (MechaCars and Competition) and accept our alternative that there is a difference between the two groups.  The null hypothesis is that the means of mpg of all groups are equal, and the alternative hypothesis is that at least one of this means is different from all other groups.
