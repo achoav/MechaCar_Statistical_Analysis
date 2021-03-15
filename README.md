@@ -67,7 +67,7 @@ The t-test has a p-value of 0.3451, that is not statistically significant: so, w
 ### Lot 3 vs. Population Mean:
 The t-test has a p-value of 0.637, that is not statistically significant: so, we do not have enough evidence to reject the "null hypothesis".  Lot#3 and Population mean are statistically similar.  
 
-![](images/lot3.PNG)
+![](Images/lot3.PNG)  
 
 ## Study Design
   •	Increase the test by adding different categorical car data (SUV, sports car, Pickups).  
